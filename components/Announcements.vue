@@ -15,8 +15,8 @@
           <div class="screen__header">
             <div class="title">{{ screen.id }}: {{ screen.name }}</div>
             <div class="switch" @click="toggleScreen(screen)">
-              <img v-if="!screen.showing" src="~/assets/icons/off.svg" />
-              <img v-else src="~/assets/icons/on.svg" />
+              <img v-if="!screen.showing" src="~/assets/icons/off.png" />
+              <img v-else src="~/assets/icons/on.png" />
             </div>
           </div>
           <div class="textbox__container">
