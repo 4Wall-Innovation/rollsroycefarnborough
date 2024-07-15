@@ -82,12 +82,12 @@ export default {
 
       if (screen.showing) {
         this.$socket.send("send-osc", {
-          address: `/location/2/4/${screenIndex + 1}/press`,
+          address: `/location/2/3/${screenIndex + 1}/press`,
           args: [],
         });
       } else {
         this.$socket.send("send-osc", {
-          address: `/location/2/5/${screenIndex + 1}/press`,
+          address: `/location/2/4/${screenIndex + 1}/press`,
           args: [],
         });
       }
