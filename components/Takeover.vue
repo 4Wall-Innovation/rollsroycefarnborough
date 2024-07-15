@@ -66,12 +66,12 @@ export default {
       let videoIndex = this.videos.indexOf(this.$global.currentVideo);
       if (this.$global.playing) {
         this.$socket.send("send-osc", {
-          address: `/location/2/1/${videoIndex + 1}/press`,
+          address: `/location/2/2/${videoIndex + 1}/press`,
           args: [],
         });
       } else {
         this.$socket.send("send-osc", {
-          address: `/location/2/2/${videoIndex + 1}/press`,
+          address: `/location/2/1/${videoIndex + 1}/press`,
           args: [],
         });
       }
