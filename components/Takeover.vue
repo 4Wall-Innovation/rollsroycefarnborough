@@ -86,7 +86,7 @@ export default {
     justify-content: center;
     gap: 30px;
     .button {
-      width: 200px;
+      width: 160px;
       height: 60px;
       border-radius: 10px;
       background: #4c4c4c;
