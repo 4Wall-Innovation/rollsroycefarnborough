@@ -1,14 +1,14 @@
 [
     {
         "id": "A",
-        "name": "Exterior Screen",
+        "name": "Reception Screen",
         "showing": false,
         "header": "Q&A Session \nwith J. Blake",
         "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
         "id": "B",
-        "name": "Reception Screen",
+        "name": "Exterior Screen",
         "showing": false,
         "header": "1",
         "body": "2"
