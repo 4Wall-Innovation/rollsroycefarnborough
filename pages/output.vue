@@ -52,8 +52,8 @@ body {
 
 .output {
   background: #0f0698;
-  width: 100vw;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   .state {
     position: absolute;
     width: 100%;
@@ -108,8 +108,8 @@ body {
           flex-direction: column;
           gap: 30px;
           .header {
-            font-size: 4vw;
-            line-height: 4vw;
+            font-size: 4dvw;
+            line-height: 4dvw;
           }
           .body {
             font-size: 42px;

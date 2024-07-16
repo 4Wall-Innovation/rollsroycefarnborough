@@ -19,8 +19,8 @@ body {
 .index {
   color: #fff;
   background: #000;
-  width: 100vw;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   padding: 30px;
   display: flex;
   flex-direction: column;
