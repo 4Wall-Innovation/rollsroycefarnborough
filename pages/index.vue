@@ -21,18 +21,18 @@ body {
   background: #000;
   width: 100dvw;
   height: 100dvh;
-  padding: 30px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  gap: 40px;
+  gap: 20px;
 
   .card {
     display: flex;
     gap: 30px;
     background: #333;
     width: 100%;
-    padding: 46px;
+    padding: 26px;
     box-sizing: border-box;
     .icon {
       padding-top: 7px;
@@ -45,7 +45,7 @@ body {
       display: flex;
       flex-direction: column;
       flex-grow: 1;
-      gap: 30px;
+      gap: 20px;
       .header {
         display: flex;
         justify-content: space-between;

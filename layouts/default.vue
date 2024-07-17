@@ -7,7 +7,9 @@
 export default {
   async mounted() {
     await this.$socket.init();
+    await this.$global.init();
     await this.$global.getScreens();
+    console.log(this.$global);
     this.$global.loaded = true;
   },
 };

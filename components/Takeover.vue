@@ -56,7 +56,7 @@ export default {
       this.$global.currentVideo = data;
       this.$global.playing = true;
       let videoIndex = this.videos.indexOf(this.$global.currentVideo);
-      this.$socket.send("send-osc", {
+      this.$axios.post("/osc", {
         address: `/location/2/0/${videoIndex + 1}/press`,
         args: [],
       });
@@ -65,12 +65,12 @@ export default {
       this.$global.playing = !this.$global.playing;
       let videoIndex = this.videos.indexOf(this.$global.currentVideo);
       if (this.$global.playing) {
-        this.$socket.send("send-osc", {
+        this.$axios.post("/osc", {
           address: `/location/2/2/${videoIndex + 1}/press`,
           args: [],
         });
       } else {
-        this.$socket.send("send-osc", {
+        this.$axios.post("/osc", {
           address: `/location/2/1/${videoIndex + 1}/press`,
           args: [],
         });

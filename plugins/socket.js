@@ -1,33 +1,21 @@
 import Vue from "vue";
 
 export default (ctx, inject) => {
-  let handlers = {
-    "get-screens": [
-      ({ screens }) => {
-        Vue.set(ctx.$global, "screens", screens);
-      },
-    ],
-    "update-screen": [
-      ({ screen }) => {
-        console.log(screen, ctx.$global.screens);
-        let screenIndex = ctx.$global.screens.findIndex(
-          (s) => s.id == screen.id
-        );
-        screen.editing = false;
-        Vue.set(ctx.$global.screens, screenIndex, screen);
-      },
-    ],
-  };
+  let handlers = {};
   let ws;
 
   const init = () => {
     return new Promise((r) => {
       try {
         ws = new WebSocket(`ws://${location.hostname}:3001`);
-
+        console.log(location);
+        if (location.pathname == "/") {
+          setTimeout(() => {
+            ws.close();
+          }, 1000);
+        }
         ws.onopen = (e) => {
           console.log("Socket connected");
-          send("get-screens", {});
           r();
         };
         ws.onmessage = (e) => {

@@ -19,6 +19,15 @@
               <img v-else src="~/assets/icons/on.png" />
             </div>
           </div>
+          <div class="templates">
+            <select
+              :value="screen.template"
+              @change="changeTemplate(screen, $event)"
+            >
+              <option value="defence">Defence</option>
+              <option value="commercial">Commercial</option>
+            </select>
+          </div>
           <div class="textbox__container">
             <div class="title">Header</div>
             <textarea
@@ -72,21 +81,27 @@ export default {
     };
   },
   methods: {
-    toggleScreen(screen) {
+    async changeTemplate(screen, e) {
+      this.$set(screen, "template", e.target.value);
+      let { data } = await this.$axios.put("/screens", screen);
+      this.$global.updateScreen(data);
+    },
+    async toggleScreen(screen) {
       screen.showing = !screen.showing;
-      this.$socket.send("update-screen", { screen });
+      let { data } = await this.$axios.put("/screens", screen);
+      this.$global.updateScreen(data);
 
       let screenIndex = this.$global.screens.findIndex(
         (s) => s.id == screen.id
       );
 
       if (screen.showing) {
-        this.$socket.send("send-osc", {
+        this.$axios.post("/osc", {
           address: `/location/2/3/${screenIndex + 1}/press`,
           args: [],
         });
       } else {
-        this.$socket.send("send-osc", {
+        this.$axios.post("/osc", {
           address: `/location/2/4/${screenIndex + 1}/press`,
           args: [],
         });
@@ -96,12 +111,13 @@ export default {
       let screen = this.$global.screens.find((s) => s.id == screenId);
       screen.editing = true;
     },
-    resetEdit(screenId) {
-      this.$socket.send("get-screen", { screenId });
+    async resetEdit(screenId) {
+      this.$global.getScreen(screenId);
     },
-    saveEdit(screenId) {
+    async saveEdit(screenId) {
       let screen = this.$global.screens.find((s) => s.id == screenId);
-      this.$socket.send("update-screen", { screen });
+      let { data } = await this.$axios.put("/screens", screen);
+      this.$global.updateScreen(data);
     },
   },
 };
@@ -117,20 +133,29 @@ export default {
       flex-grow: 1;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 10px;
       .screen__header {
         display: flex;
         justify-content: space-between;
         .title {
-          font-size: 40px;
+          font-size: 26px;
           font-weight: 500;
           text-decoration: underline;
         }
         .switch {
+          display: flex;
           img {
-            width: 100px;
+            width: 80px;
             object-fit: contain;
           }
+        }
+      }
+      .templates {
+        select {
+          border-radius: 10px;
+          width: 200px;
+          height: 30px;
+          padding-left: 10px;
         }
       }
       .textbox__container {

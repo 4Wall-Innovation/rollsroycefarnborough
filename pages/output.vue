@@ -10,6 +10,7 @@
       </div>
     </div>
     <div v-else class="state output__container">
+      <img :src="`backgrounds/${screen.template}.png`" class="background" />
       <img src="~/assets/images/logo.png" class="logo" />
 
       <img class="top" src="~/assets/images/lines1.png" />
@@ -78,6 +79,15 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      object-fit: cover;
+    }
     .logo {
       position: absolute;
       top: 0;

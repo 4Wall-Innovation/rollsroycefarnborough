@@ -2,15 +2,17 @@
     {
         "id": "A",
         "name": "Reception Screen",
-        "showing": false,
-        "header": "Q&A Session \nwith J. Blake",
-        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "showing": true,
+        "header": "testing",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "template": "commercial"
     },
     {
         "id": "B",
         "name": "Exterior Screen",
-        "showing": false,
+        "showing": true,
         "header": "1",
-        "body": "2"
+        "body": "2",
+        "template": "defence"
     }
 ]
