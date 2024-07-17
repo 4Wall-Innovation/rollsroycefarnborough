@@ -8,12 +8,7 @@ export default (ctx, inject) => {
     return new Promise((r) => {
       try {
         ws = new WebSocket(`ws://${location.hostname}:3001`);
-        console.log(location);
-        if (location.pathname == "/") {
-          setTimeout(() => {
-            ws.close();
-          }, 1000);
-        }
+
         ws.onopen = (e) => {
           console.log("Socket connected");
           r();
