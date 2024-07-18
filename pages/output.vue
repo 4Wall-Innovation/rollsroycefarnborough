@@ -43,10 +43,10 @@ export default {
 
 body {
   margin: 0;
-  font-family: Nunito;
 }
 
 .output {
+  font-family: RRPioneer;
   background: #0f0698;
   width: 100dvw;
   height: 100dvh;

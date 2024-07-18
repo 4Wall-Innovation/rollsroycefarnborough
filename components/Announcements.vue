@@ -76,8 +76,8 @@
 export default {
   data() {
     return {
-      maxHeaderLength: 30,
-      maxBodyLength: 200,
+      maxHeaderLength: 85,
+      maxBodyLength: 240,
     };
   },
   methods: {
@@ -173,6 +173,8 @@ export default {
           border: 1px solid #919191;
           flex-grow: 1;
           color: #fff;
+          font-family: RRPioneer;
+          font-weight: normal;
         }
         .character__count {
           text-align: end;

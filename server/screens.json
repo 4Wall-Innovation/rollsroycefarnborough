@@ -3,16 +3,16 @@
         "id": "A",
         "name": "Reception Screen",
         "showing": true,
-        "header": "testing",
-        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "header": "LOREM IPSUM IS SIMPLY DUMMY LOREM IPSUM IS SIMPLY DUMMY LOREM IPSUM IS SIMPLY DUMMY L",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
         "template": "defence"
     },
     {
         "id": "B",
         "name": "Exterior Screen",
         "showing": true,
-        "header": "testing",
-        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "header": "LOREM IPSUM IS SIMPLY DUMMY LOREM IPSUM IS SIMPLY DUMMY LOREM IPSUM IS SIMPLY DUMMY L",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
         "template": "civil"
     }
 ]

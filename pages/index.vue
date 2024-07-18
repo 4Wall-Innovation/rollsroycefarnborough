@@ -13,10 +13,10 @@ export default {};
 
 body {
   margin: 0;
-  font-family: Nunito;
 }
 
 .index {
+  font-family: Nunito;
   color: #fff;
   background: #000;
   width: 100dvw;
