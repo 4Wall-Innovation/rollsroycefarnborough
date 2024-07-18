@@ -25,7 +25,7 @@
               @change="changeTemplate(screen, $event)"
             >
               <option value="defence">Defence</option>
-              <option value="commercial">Commercial</option>
+              <option value="civil">Civil</option>
             </select>
           </div>
           <div class="textbox__container">

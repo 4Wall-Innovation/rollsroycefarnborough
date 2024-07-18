@@ -10,20 +10,15 @@
       </div>
     </div>
     <div v-else class="state output__container">
-      <img :src="`backgrounds/${screen.template}.png`" class="background" />
-      <img src="~/assets/images/logo.png" class="logo" />
+      <img
+        :src="`backgrounds/${screen.id}-${screen.template}.png`"
+        class="background"
+      />
 
-      <img class="top" src="~/assets/images/lines1.png" />
-      <div class="center">
-        <div class="text__container">
-          <div class="text">
-            <div ref="header" class="header">{{ screen.header }}</div>
-            <div ref="body" class="body">{{ screen.body }}</div>
-          </div>
-        </div>
-        <img src="~/assets/images/lines2.png" />
+      <div class="text" :class="screen.id">
+        <div ref="header" class="header">{{ screen.header }}</div>
+        <div ref="body" class="body">{{ screen.body }}</div>
       </div>
-      <img class="bottom" src="~/assets/images/lines3.png" />
     </div>
   </div>
 </template>
@@ -94,43 +89,48 @@ body {
       left: 0;
     }
 
-    .top {
+    .text {
       position: absolute;
-      top: 0;
-      right: 0;
-    }
-    .center {
-      position: relative;
-      .text__container {
-        position: absolute;
-        right: 280px;
-        top: 80px;
-        bottom: 120px;
-        width: 1070px;
-        padding: 50px;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        .text {
-          flex-grow: 1;
-          color: #fff;
-          display: flex;
-          flex-direction: column;
-          gap: 30px;
-          .header {
-            font-size: 4dvw;
-            line-height: 4dvw;
-          }
-          .body {
-            font-size: 42px;
-          }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-grow: 1;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+
+      &.A {
+        left: 166px;
+        top: 645px;
+        width: 900px;
+        height: 430px;
+        .header {
+          font-size: 50px;
+          line-height: 58px;
+        }
+        .body {
+          font-size: 37px;
+          line-height: 44px;
         }
       }
-    }
-    .bottom {
-      position: absolute;
-      bottom: 0;
-      right: 0;
+      &.B {
+        left: 140px;
+        top: 370px;
+        width: 670px;
+        height: 280px;
+        .header {
+          font-size: 36px;
+          line-height: 42px;
+        }
+        .body {
+          font-size: 32px;
+          line-height: 36px;
+        }
+      }
+
+      .header {
+        font-weight: bold;
+      }
     }
   }
 }

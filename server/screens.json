@@ -5,14 +5,14 @@
         "showing": true,
         "header": "testing",
         "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "template": "commercial"
+        "template": "defence"
     },
     {
         "id": "B",
         "name": "Exterior Screen",
         "showing": true,
-        "header": "1",
-        "body": "2",
-        "template": "defence"
+        "header": "testing",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "template": "civil"
     }
 ]
