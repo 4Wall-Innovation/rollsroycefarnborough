@@ -9,11 +9,7 @@
           <div class="title">Takeover content</div>
           <div class="subtitle">CLICK BELOW TO PLAY</div>
         </div>
-        <div
-          class="pill__button"
-          :class="{ active: $global.currentVideo != 'Default' }"
-          @click="playpause()"
-        >
+        <div class="pill__button active" @click="playpause()">
           {{ $global.playing ? "PAUSE" : "PLAY" }}
         </div>
       </div>
